@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2026/07/12/hello-world/"/>
+    <url>/2026/07/12/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Claude Code 功能概览</title>
+    <link href="/2026/07/12/claude-code-intro/"/>
+    <url>/2026/07/12/claude-code-intro/</url>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th align="left">快捷命令</th><th align="left">功能说明</th></tr></thead><tbody><tr><td align="left">Shift + Tab</td><td align="left">在计划模式、默认模式和自动编辑模式这三种权限模式之间循环切换 ¹ 。</td></tr><tr><td align="left">! (感叹号) + 命令</td><td align="left">进入 bash 模式，直接在电脑上运行终端命令，而不是作为对话发给 Claude Code ² 。</td></tr><tr><td align="left"># + 输入</td><td align="left">直接说你想让 claude 记住什么</td></tr><tr><td align="left">Ctrl + B</td><td align="left">当终端被运行的项目阻塞时，将该进程放到后台运行，以便继续对话 ² ³ 。</td></tr><tr><td align="left">Option + Enter (Mac) <br> Ctrl + Enter (Win)</td><td align="left">在输入框中进行文本换行（直接按 Enter 会发送消息） ⁴ 。</td></tr><tr><td align="left">Ctrl + V</td><td align="left">将图片粘贴到对话框中（注意在 Mac 上也是使用 Ctrl+V） ⁴ 。</td></tr><tr><td align="left">&#x2F;help</td><td align="left">查看所有可用的斜杠命令以及它们背后的思想 ⁵ 。</td></tr><tr><td align="left">&#x2F;model</td><td align="left">切换不同档位（高、中、低）的大模型 ⁵ 。</td></tr><tr><td align="left">&#x2F;btw + 问题</td><td align="left">询问与当前项目无关的问题，回答会与原对话的上下文隔离，按 ESC 退出后不占用上下文 ⁵ 。</td></tr><tr><td align="left">&#x2F;simplify</td><td align="left">这是一个内置 skill，会派生三个 agent 从代码质量、运行效率和是否可用三个角度做代码审核与自动优化 ⁵ ⁶ 。</td></tr><tr><td align="left">连接两下 ESC 或 <br> &#x2F;rewind</td><td align="left">调出撤回&#x2F;回滚界面，可以快捷撤销 Claude Code 刚刚编辑过的文件和对话 ⁶ ⁷ 。</td></tr><tr><td align="left">&#x2F;compact</td><td align="left">主动压缩上下文，保留关键信息并释放大部分上下文空间，省 token 且让模型更专注 ⁸ 。</td></tr><tr><td align="left">&#x2F;clear</td><td align="left">彻底清空当前上下文，相当于重新开启一个新的对话 ⁸ 。</td></tr><tr><td align="left">&#x2F;cost</td><td align="left">详细展示当前上下文的占比，包括各个 MCP 和 skill 占用的 token 数量 ⁸ 。</td></tr><tr><td align="left">连接两次 Ctrl + C</td><td align="left">退出 Claude Code 的对话 ⁹ 。</td></tr><tr><td align="left">&#x2F;resume</td><td align="left">调出历史记录，选择并恢复到之前的某一次对话 ⁹ 。</td></tr><tr><td align="left">claude -</td><td align="left">启动时在命令后加空格和横杠，代表 Continue，直接继续上一次的对话 ⁹ 。</td></tr><tr><td align="left">&#x2F;init</td><td align="left">初始化整个项目，自动扫描项目架构并将信息写入项目级的 claude.md 文件中 ¹⁰ 。</td></tr><tr><td align="left">&#x2F;memory</td><td align="left">打开记忆选项，可以选择编辑全局或项目级的 claude.md ¹¹ ，也可以用来开启自动记忆 (Auto memory) 功能 ¹² 。</td></tr><tr><td align="left">&#x2F;技能名称</td><td align="left">手动调用特定的 skill（例如输入 &#x2F;frontend 调用前端优化技能） ¹³ 。</td></tr><tr><td align="left">&#x2F;agent</td><td align="left">进入引导流程，手动创建子 agent (subagent) 去执行并行任务 ¹⁴ 。</td></tr><tr><td align="left">&#x2F;plugin</td><td align="left">进入插件管理页面，可以发现新插件或管理已安装的插件 ¹⁵ ¹⁶ 。</td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>AI工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Claude</tag>
+      
+      <tag>CLI</tag>
+      
+      <tag>AI编程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
